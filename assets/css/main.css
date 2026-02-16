@@ -1743,3 +1743,11 @@ a:hover {
   background-repeat: no-repeat;
 }
 
+/* --- FORCE BACKGROUND ON DIMENSION LAYER --- */
+#bg:before {
+  background-image: url("assets/images/Mediterrhed/pic31.png") !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+
