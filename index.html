@@ -1,88 +1,107 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Summerback — Gallery</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mediterrhed</title>
+  <meta name="description" content="Spring Attitude (Rome, 29–30 May). Beach house drift, 15 May — 4 June." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300,400,500,600&family=EB+Garamond:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Summerback — Mediterrhed Gallery</h1>
-  </header>
 
-  <main>
-    <section id="gallery" class="gallery"></section>
-  </main>
+<header class="topbar">
+  <div class="brand">MEDITERRHED</div>
+  <div class="stamp">15 MAY — 4 JUNE</div>
+</header>
 
-  <script>
-    // List of files in assets/images/Mediterrhed
-    const files = [
-      "IMG_1636.jpeg",
-      "IMG_2204 2.jpeg",
-      "IMG_2204.jpeg",
-      "IMG_2685 2.jpeg",
-      "IMG_2685.jpeg",
-      "IMG_4056.jpeg",
-      "IMG_4660 2.jpeg",
-      "IMG_4660.jpeg",
-      "IMG_4666.jpeg",
-      "IMG_5424.jpeg",
-      "IMG_6132.jpeg",
-      "IMG_6145.PNG",
-      "IMG_6966.jpeg",
-      "IMG_6974.jpeg",
-      "IMG_7347.jpeg",
-      "IMG_7897.MOV",
-      "IMG_9370.jpeg",
-      "IMG_9393.jpeg",
-      "IMG_9425.jpeg",
-      "IMG_9553.jpeg",
-      "IMG_9608.jpeg",
-      "IMG_9629.MOV",
-      "IMG_9636.jpeg",
-      "IMG_9637.jpeg",
-      "IMG_9675.jpeg",
-      "P1070724 2.JPG",
-      "P1070724.JPG",
-      "P1070753 2.JPG",
-      "P1070753.JPG",
-      "a518735f-f73d-4807-8cc1-9a2023324d50.jpg",
-      "e6c50519-2321-4f4c-83d8-daff34070657.jpg",
-      "ea342cc5-d5a5-4980-922e-34ecd5f34879.jpg"
-    ];
+<main>
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>
+        Mediterranean
+        <span class="italic">hedonism</span>
+      </h1>
+      <p class="sub">
+        A beach house drift — before & after <span class="nowrap">Spring Attitude</span>.
+      </p>
 
-    const gallery = document.getElementById('gallery');
-    const base = 'assets/images/Mediterrhed/';
+      <div class="meta">
+        <div class="chip">
+          <div class="label">APEX</div>
+          <div class="value">ROME · 29–30 MAY</div>
+        </div>
+        <div class="chip">
+          <div class="label">WINDOW</div>
+          <div class="value">15 MAY — 4 JUNE</div>
+        </div>
+      </div>
 
-    files.forEach(name => {
-      const ext = name.split('.').pop().toLowerCase();
-      const src = base + encodeURIComponent(name);
+      <p class="note">
+        People coming, people leaving. Bring yourself. Bring a record. Don’t ask for a schedule.
+      </p>
 
-      const item = document.createElement('div');
-      item.className = 'card';
+      <div class="cta">
+        <!-- Replace with your link (WhatsApp / Instagram / form) -->
+        <a class="btn" href="#" aria-label="Message to join">MESSAGE TO JOIN</a>
+        <span class="hint">Private link. Share with taste.</span>
+      </div>
+    </div>
+  </section>
 
-      if (ext === 'mov' || ext === 'mp4' || ext === 'webm') {
-        const vid = document.createElement('video');
-        vid.controls = true;
-        vid.src = src;
-        vid.className = 'media';
-        item.appendChild(vid);
-      } else {
-        const img = document.createElement('img');
-        img.src = src;
-        img.alt = name;
-        img.className = 'media';
-        item.appendChild(img);
-      }
+  <section class="divider">
+    <div class="line"></div>
+    <div class="mini">ROME ⇄ COAST</div>
+    <div class="line"></div>
+  </section>
 
-      const caption = document.createElement('div');
-      caption.className = 'caption';
-      caption.textContent = name;
-      item.appendChild(caption);
+  <section class="gallery-wrap">
+    <h2 class="section-title">Images</h2>
 
-      gallery.appendChild(item);
-    });
-  </script>
+    <!-- One full-bleed panorama first -->
+    <figure class="fullbleed">
+      <img loading="lazy" src="assets/images/Mediterrhed/IMG_9553.jpeg" alt="">
+    </figure>
+
+    <!-- Masonry-ish columns (simple, fast) -->
+    <section class="gallery" id="gallery">
+      <img loading="lazy" src="assets/images/Mediterrhed/e6c50519-2321-4f4c-83d8-daff34070657.jpg" alt="">
+      <img loading="lazy" src="assets/images/Mediterrhed/ea342cc5-d5a5-4980-922e-34ecd5f34879.jpg" alt="">
+      <img loading="lazy" src="assets/images/Mediterrhed/a518735f-f73d-4807-8cc1-9a2023324d50.jpg" alt="">
+      <img loading="lazy" src="assets/images/Mediterrhed/IMG_1636.jpeg" alt="">
+      <img loading="lazy" src="assets/images/Mediterrhed/IMG_2204-2.jpeg" alt="">
+      <img loading="lazy" src="assets/images/Mediterrhed/IMG_6132.jpeg" alt="">
+      <img loading="lazy" src="assets/images/Mediterrhed/IMG_6145.png" alt="">
+      <img loading="lazy" src="assets/images/Mediterrhed/IMG_6966.jpeg" alt="">
+      <img loading="lazy" src="assets/images/Mediterrhed/IMG_7347.jpeg" alt="">
+      <img loading="lazy" src="assets/images/Mediterrhed/IMG_9370.jpeg" alt="">
+      <img loading="lazy" src="assets/images/Mediterrhed/IMG_9393.jpeg" alt="">
+      <img loading="lazy" src="assets/images/Mediterrhed/IMG_9425.jpeg" alt="">
+      <img loading="lazy" src="assets/images/Mediterrhed/IMG_9553.jpeg" alt="">
+      <img loading="lazy" src="assets/images/Mediterrhed/IMG_4660-2.jpeg" alt="">
+    </section>
+
+    <p class="caption">
+      This is not an “event” — it’s a temporary climate.
+    </p>
+  </section>
+
+  <section class="footer">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <div class="footer-title">Spring Attitude · Rome</div>
+        <div class="footer-sub">29–30 May</div>
+      </div>
+      <div class="footer-right">
+        <div class="footer-title">Beach House</div>
+        <div class="footer-sub">15 May — 4 June</div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<script src="script.js"></script>
 </body>
 </html>
