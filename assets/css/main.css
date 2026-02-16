@@ -1656,3 +1656,80 @@ input, select, textarea {
 		body.is-preload #footer {
 			opacity: 0;
 		}
+/* ===============================
+   SUMMERBACK COLOR OVERRIDE
+   =============================== */
+
+:root {
+  --bg-dark: #0f1c24;
+  --bg-overlay: rgba(15,28,36,0.55);
+
+  --text-main: #f4efe9;
+  --text-muted: #d6cfc5;
+
+  --accent-orange: #c96a3a;
+  --accent-green: #6f7f5a;
+  --accent-tan: #d2b48c;
+}
+
+/* Global text */
+body, input, select, textarea {
+  color: var(--text-main);
+}
+
+h1, h2, h3, h4, h5 {
+  color: var(--text-main);
+  letter-spacing: 0.08em;
+}
+
+/* Header text */
+#header p {
+  color: var(--text-muted);
+}
+
+/* Navigation */
+#header nav ul li a {
+  color: var(--text-main);
+  border-color: var(--accent-tan);
+}
+
+#header nav ul li a:hover {
+  color: var(--accent-orange);
+  border-color: var(--accent-orange);
+}
+
+/* Main panels */
+#main article {
+  background: rgba(15, 28, 36, 0.85);
+  border-color: var(--accent-tan);
+}
+
+/* Links */
+a {
+  color: var(--accent-orange);
+}
+
+a:hover {
+  color: var(--accent-green);
+}
+
+/* Buttons */
+.button.primary {
+  background-color: var(--accent-orange);
+  color: #fff;
+}
+
+.button.primary:hover {
+  background-color: var(--accent-green);
+}
+
+/* Footer */
+#footer {
+  color: var(--text-muted);
+}
+
+/* Background image overlay */
+#bg:after {
+  background: var(--bg-overlay);
+}
+
