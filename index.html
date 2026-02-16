@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Summerback — Gallery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Summerback — Mediterrhed Gallery</h1>
+  </header>
+
+  <main>
+    <section id="gallery" class="gallery"></section>
+  </main>
+
+  <script>
+    // List of files in assets/images/Mediterrhed
+    const files = [
+      "IMG_1636.jpeg",
+      "IMG_2204 2.jpeg",
+      "IMG_2204.jpeg",
+      "IMG_2685 2.jpeg",
+      "IMG_2685.jpeg",
+      "IMG_4056.jpeg",
+      "IMG_4660 2.jpeg",
+      "IMG_4660.jpeg",
+      "IMG_4666.jpeg",
+      "IMG_5424.jpeg",
+      "IMG_6132.jpeg",
+      "IMG_6145.PNG",
+      "IMG_6966.jpeg",
+      "IMG_6974.jpeg",
+      "IMG_7347.jpeg",
+      "IMG_7897.MOV",
+      "IMG_9370.jpeg",
+      "IMG_9393.jpeg",
+      "IMG_9425.jpeg",
+      "IMG_9553.jpeg",
+      "IMG_9608.jpeg",
+      "IMG_9629.MOV",
+      "IMG_9636.jpeg",
+      "IMG_9637.jpeg",
+      "IMG_9675.jpeg",
+      "P1070724 2.JPG",
+      "P1070724.JPG",
+      "P1070753 2.JPG",
+      "P1070753.JPG",
+      "a518735f-f73d-4807-8cc1-9a2023324d50.jpg",
+      "e6c50519-2321-4f4c-83d8-daff34070657.jpg",
+      "ea342cc5-d5a5-4980-922e-34ecd5f34879.jpg"
+    ];
+
+    const gallery = document.getElementById('gallery');
+    const base = 'assets/images/Mediterrhed/';
+
+    files.forEach(name => {
+      const ext = name.split('.').pop().toLowerCase();
+      const src = base + encodeURIComponent(name);
+
+      const item = document.createElement('div');
+      item.className = 'card';
+
+      if (ext === 'mov' || ext === 'mp4' || ext === 'webm') {
+        const vid = document.createElement('video');
+        vid.controls = true;
+        vid.src = src;
+        vid.className = 'media';
+        item.appendChild(vid);
+      } else {
+        const img = document.createElement('img');
+        img.src = src;
+        img.alt = name;
+        img.className = 'media';
+        item.appendChild(img);
+      }
+
+      const caption = document.createElement('div');
+      caption.className = 'caption';
+      caption.textContent = name;
+      item.appendChild(caption);
+
+      gallery.appendChild(item);
+    });
+  </script>
+</body>
+</html>
