@@ -1731,23 +1731,36 @@ a:hover {
   color: var(--text-muted);
 }
 
-/* Background image overlay */
-#bg:after {
-  background: var(--bg-overlay);
-}
-/* --- HOME BACKGROUND IMAGE --- */
-#bg {
-  background-image: url("assets/images/Mediterrhed/pic31.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-/* --- FORCE BACKGROUND ON DIMENSION LAYER --- */
-#bg:before {
-  background-image: url("assets/images/Mediterrhed/pic31.png") !important;
+/* --- FORCE HOME BACKGROUND IMAGE (correct relative path) --- */
+#bg, #bg:before {
+  background-image: url("../images/Mediterrhed/pic31.png") !important;
   background-position: center !important;
   background-repeat: no-repeat !important;
   background-size: cover !important;
 }
 
+/* Dark overlay for readability */
+#bg:after {
+  background: rgba(15, 28, 36, 0.55) !important;
+}
+/* --- FORCE WARM PALETTE TO SHOW --- */
+body {
+  color: #f4efe9 !important;
+}
+
+#header .inner, #header .content, #header a {
+  color: #f4efe9 !important;
+}
+
+#header p {
+  color: #d6cfc5 !important;
+}
+
+#header nav ul li a {
+  border-color: #d2b48c !important;
+}
+
+#header nav ul li a:hover {
+  color: #c96a3a !important;
+  border-color: #c96a3a !important;
+}
