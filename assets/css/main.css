@@ -1794,4 +1794,28 @@ body {
 @media screen and (max-width: 480px) {
   .gallery-grid { grid-template-columns: 1fr; }
   .gallery-grid img { height: 260px; }
+}/* --- FORCE DARK TEXT ON HOME / HEADER --- */
+#header,
+#header h1,
+#header p,
+#header a,
+#header .inner {
+  color: #111 !important;
 }
+
+/* Navigation links on home */
+#header nav ul li a {
+  color: #111 !important;
+  border-color: #111 !important;
+}
+
+#header nav ul li a:hover {
+  color: #111 !important;
+  border-color: #111 !important;
+}
+
+/* Language toggle icons */
+#lang-toggle span {
+  color: #111 !important;
+}
+
